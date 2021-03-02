@@ -1,0 +1,51 @@
+<div #navBarWrapper>
+  <ul ngbNav [activeId]="2" [orientation]="orientation" #navBar>
+    <li [ngbNavItem]="1">
+      <a ngbNavLink>Visual Language</a>
+    </li>
+    <li [ngbNavItem]="2" ngbDropdown>
+      <a ngbNavLink ngbDropdownToggle>Components</a>
+      <div ngbDropdownMenu>
+        <button ngbDropdownItem>Action</button>
+        <button ngbDropdownItem>Another action</button>
+        <button ngbDropdownItem>Something else here</button>
+      </div>
+    </li>
+    <li [ngbNavItem]="3">
+      <a ngbNavLink>Components1</a>
+    </li>
+    <li [ngbNavItem]="4">
+      <a ngbNavLink>Components2</a>
+    </li>
+    <li [ngbNavItem]="5">
+      <a ngbNavLink>Components3</a>
+    </li>
+    <li [ngbNavItem]="6" ngbDropdown class="nav-item">
+      <a ngbNavLink ngbDropdownToggle>Components4</a>
+      <div ngbDropdownMenu>
+        <button ngbDropdownItem>Action</button>
+        <button ngbDropdownItem>Another action</button>
+        <button ngbDropdownItem>Something else here</button>
+      </div>
+    </li>
+    <li [ngbNavItem]="7">
+      <a ngbNavLink>Components5</a>
+    </li>
+    <li [ngbNavItem]="8">
+      <a ngbNavLink>Components6</a>
+    </li>
+    <li [ngbNavItem]="9">
+      <a ngbNavLink (click)="isMenuCollapsed = !isMenuCollapsed">
+        Show More
+      </a>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light mb-3 d-flex flex-column">
+        <div [ngbCollapse]="isMenuCollapsed" class="collapse ">
+          <ul ngbNav orientation="vertical" class="nav-pills" #more></ul>
+        </div>
+      </nav>
+
+    </li>
+  </ul>
+</div>
+
+
